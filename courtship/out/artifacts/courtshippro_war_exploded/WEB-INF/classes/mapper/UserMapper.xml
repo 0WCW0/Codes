@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC " -//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itwanli.dao.UserDao">
+    <resultMap id="userResultMap" type="user">
+        <result property="id" column="id" />
+        <result property="username" column="username" />
+        <result property="password" column="password" />
+        <result property="type" column="type" />
+    </resultMap>
+
+    <select id="login" parameterType="user" resultMap="userResultMap">
+        select * from user
+        where username=#{username} and password=#{password}
+    </select>
+
+    <insert id="register" parameterType="user">
+        insert into user values(#{id},#{username},#{password},#{type})
+    </insert>
+
+    <insert id="doAddU" parameterType="user">
+        insert into user values(#{id},#{username},#{password},#{type})
+    </insert>
+
+    <delete id="doDelU" parameterType="Integer">
+        delete from user where id=#{id}
+    </delete>
+
+    <update id="doUpdU" parameterType="user">
+        update user set
+        username=#{username},password=#{password},type=#{type}
+        where id=#{id}
+    </update>
+
+    <select id="selByIdU" parameterType="Integer" resultMap="userResultMap">
+        select * from user where id=#{id}
+    </select>
+
+    <select id="selByAllU" resultMap="userResultMap">
+        select * from user
+    </select>
+
+    <select id="selByLikeU" parameterType="String" resultMap="userResultMap">
+        select * from user where username like '%${value}%'
+    </select>
+
+    <!-- limit startindex,4-->
+    <select id="showlist" parameterType="Integer" resultMap="userResultMap">
+        select * from user limit #{startIndex},5
+    </select>
+
+    <select id="pagecount" resultType="int">
+        select count(*) from user
+    </select>
+</mapper>

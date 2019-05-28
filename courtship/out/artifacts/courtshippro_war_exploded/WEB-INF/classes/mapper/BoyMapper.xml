@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC " -//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itwanli.dao.BoyDao">
+    <resultMap id="boyResultMap" type="boy">
+        <id property="bid" column="bid" />
+        <result property="bname" column="bname" />
+        <result property="bage" column="bage" />
+        <result property="bheight" column="bheight" />
+        <result property="bweight" column="bweight" />
+        <result property="bhobby" column="bhobby" />
+        <result property="bcolor" column="bcolor" />
+    </resultMap>
+
+    <insert id="doAddB" parameterType="boy">
+        insert into boy value(#{bid},#{bname},#{bage},#{bheight},#{bweight},#{bhobby},#{bcolor})
+    </insert>
+
+    <delete id="doDelB" parameterType="Integer">
+        delete from boy where bid=#{bid}
+    </delete>
+
+    <update id="doUpdB" parameterType="boy">
+        update boy set
+        bname=#{bname},bage=#{bage},bheight=#{bheight},bweight=#{bweight},bhobby=#{bhobby},bcolor=#{bcolor}
+        where bid=#{bid}
+    </update>
+
+    <select id="selByIdB" parameterType="Integer" resultMap="boyResultMap">
+        select * from boy where bid=#{bid}
+    </select>
+
+    <select id="selByAllB" resultMap="boyResultMap">
+        select * from boy
+    </select>
+
+    <select id="selByLikeB" parameterType="String" resultMap="boyResultMap">
+        select * from boy where bname like '%${value}%'
+    </select>
+
+    <!-- limit startindex,4-->
+    <select id="showlist" parameterType="Integer" resultMap="boyResultMap">
+        select * from boy limit #{startIndex},5
+    </select>
+
+    <select id="pagecount" resultType="int">
+        select count(*) from boy
+    </select>
+
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+    <!-- springmvc.xml配置文件： controller控制器 -->
+    <!-- 1.注入注解和注解驱动 -->
+    <context:annotation-config />
+    <mvc:annotation-driven />
+
+    <!-- 2.静态资源默认加载：（1）加入静态资源的处理：js,jpg,gif,png;（2）允许使用“/”的整体映射 -->
+    <mvc:default-servlet-handler />
+
+    <!-- 3.网址路径映射进行解析成view -->
+    <bean id="irvr" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!-- 4.扫描生成controller对象 -->
+    <context:component-scan base-package="cn.itwanli.controller" />
+
+</beans>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC " -//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.itwanli.dao.LadyDao">
+    <resultMap id="ladyResultMap" type="lady">
+        <id property="lid" column="lid" />
+        <result property="lname" column="lname" />
+        <result property="lage" column="lage" />
+        <result property="lheight" column="lheight" />
+        <result property="lweight" column="lweight" />
+        <result property="lhobby" column="lhobby" />
+        <result property="lcolor" column="lcolor" />
+    </resultMap>
+
+    <insert id="doAddL" parameterType="lady">
+        insert into lady value(#{lid},#{lname},#{lage},#{lheight},#{lweight},#{lhobby},#{lcolor})
+    </insert>
+
+    <delete id="doDelL" parameterType="Integer">
+        delete from lady where lid=#{lid}
+    </delete>
+
+    <update id="doUpdL" parameterType="lady">
+        update lady set
+        lname=#{lname},lage=#{lage},lheight=#{lheight},lweight=#{lweight},lhobby=#{lhobby},lcolor=#{lcolor}
+        where lid=#{lid}
+    </update>
+
+    <select id="selByIdL" parameterType="Integer" resultMap="ladyResultMap">
+        select * from lady where lid=#{lid}
+    </select>
+
+    <select id="selByAllL" resultMap="ladyResultMap">
+        select * from lady
+    </select>
+
+    <select id="selByLikeL" parameterType="String" resultMap="ladyResultMap">
+        select * from lady where lname like '%${value}%'
+    </select>
+
+    <!-- limit startindex,4-->
+    <select id="showlist" parameterType="Integer" resultMap="ladyResultMap">
+        select * from lady limit #{startIndex},5
+    </select>
+
+    <select id="pagecount" resultType="int">
+        select count(*) from lady
+    </select>
+
+</mapper>
