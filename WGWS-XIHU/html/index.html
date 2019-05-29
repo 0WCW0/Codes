@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>西湖首页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <script type="text/javascript" src="../res/layui/layui.js"></script>
+  <link rel="stylesheet" type="text/css" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="../res/static/css/main.css">
+  
+  <link rel="stylesheet" href="../res/layui/css/modules/layer/default/layer.css">
+
+  <script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+  <script src="../res/layui/layui.js"></script>
+  <script src="../res/layer/layer.js"></script>
+  <script src="../res/static/js/jquery.js"></script>
+  <!--加载meta IE兼容文件-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+  <!-- 回到顶部 -->
+  <button id="test" style="position:fixed;right:25px;bottom:50px">
+    <img src="../res/static/images/top.jpg" alt="">
+  </button>
+  <script>
+    test.onclick = function(){
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+  <!-- header -->
+  <div class="header_box">
+    <div class="header">  
+      <ul class="app-header">
+        <li class="app-header-menuicon">
+           <i class="layui-icon layui-icon-more-vertical"></i>
+        </li>
+      </ul>
+
+      <h1 class="logo">
+        <a href="map.html">
+        <img style="width: 50%" src="../res/static/images/logo.jpg">
+        </a>
+
+      </h1>
+      <div class="nav"  style="visibility: visible">
+        <a href="index.html">西湖首页</a>
+        <a href="case.html">西湖故事</a>
+
+        <a href="service.html">游玩攻略</a>
+        <a href="about.html"  class="active">西湖十景</a>
+        <a id="login">登录/注册</a>
+      </div> 
+
+      <ul class="layui-nav header-down-nav">
+        <li class="layui-nav-item"><a href="index.html" class="active">西湖首页</a></li>
+        <li class="layui-nav-item"><a href="case.html">西湖故事</a></li>
+
+        <li class="layui-nav-item"><a href="service.html">西湖十景</a></li>
+        <li class="layui-nav-item"><a href="about.html">游玩攻略</a></li>
+        <li class="layui-nav-item"><a id="login">登录/注册</a></li>
+      </ul> 
+    </div>
+  </div>
+  <!-- end-header -->
+
+
+  <!-- content -->
+    <div class="content">
+      <div class="title">
+        <h5>欢迎您来西湖玩啊</h5>
+        <h3>邂逅西湖,感受千古</h3>
+        <h4>You will be glad to meet the LAKE!</h4>
+      </div>
+
+      <div class="layui-carousel imgbox"  id="test1">
+        <div carousel-item  class="imgH">
+          <div><img style="width: 100%" src="../res/static/images/sushi.jpg"></div>
+          <div><img style="width: 100%" src="../res/static/images/dongpo.jpg"></div>
+          <div><img style="width: 100%" src="../res/static/images/tingzi.jpg"></div>
+          <div><img style="width: 100%" src="../res/static/images/fengshu.jpg"></div>
+          <div><img style="width: 100%" src="../res/static/images/longjing.jpg"></div>
+        </div>
+      </div>
+
+      <div class="prod-show">
+        <div class="layui-fluid">
+          <div class="row layui-col-space12 layui-clear">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+              <div class="img-txt">
+                <img style="width: 100%;" src="../res/static/images/gushi.jpg" alt="">
+                <h3><a href="case.html">西湖故事</a></h3>
+              </div>
+            </div>
+
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+              <div class="img-txt">
+                <img style="width: 100%;" src="../res/static/images/shijing.jpg" alt="">
+                <h3><a href="about.html">西湖十景</a></h3>
+              </div>
+            </div>
+
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+              <div class="img-txt">
+                <img style="width: 100%;" src="../res/static/images/gonglue.jpg" alt="">
+                <h3><a href="service.html">游玩攻略</a></h3>
+              </div>
+            </div>
+
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+              <div class="img-txt">
+                <img style="width: 100%;" src="../res/static/images/map.jpg" alt="">
+                <h3><a href="map.html">地图</a></h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="prod-descr">
+        <div class="layui-fluid">
+          <div class="layui-row">
+            <div class="item layui-clear">
+            
+              <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+                <img src="../res/static/images/map_3.jpg" class="left-img">
+              </div>
+
+              <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+                <div class="text">
+                  <h3>西湖概略</h3>
+                  <p>杭州西湖它不仅是一个自然湖，更是一个人文湖，它是人类与自然和谐相处的产物，这种基因是无法复制...</p>
+                  <a href="details.html">查看更多 ></a>
+                </div>
+              </div>
+
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md8 bot-img-box">
+                <div class="bot-img">
+                  <img src="../res/static/images/fangding.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+      <div class="Partner">
+        <div class="title">
+          <h3>制作团伙</h3>
+          <h4>cooperative partner</h4>
+        </div>
+
+        <div class="cont-box">
+          <div class="layui-fluid">
+            <div class="row layui-col-space20">
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>禾·呈</h2>
+              </div>
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>三·金</h2>
+              </div>
+
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>~分</h2>
+              </div>
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>工~</h2>
+              </div>
+
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>璐·琪</h2>
+              </div>
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>志·远</h2>
+              </div>
+
+
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>王程伟</h2>
+              </div>
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>葛鑫</h2>
+              </div>
+
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>~明</h2>
+              </div>
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>确~</h2>
+              </div>
+
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>王璐琪</h2>
+              </div>
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>盛志远</h2>
+              </div>
+
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>制作</h2>
+              </div>
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>制作</h2>
+              </div>
+
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2> </h2>
+              </div>
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2> </h2>
+              </div>
+
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>资料</h2>
+              </div>
+              <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <h2>资料</h2>
+              </div>
+              
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <!-- end-content -->
+
+  
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="line"></div>
+    <p class="copyright">
+      @2019  ALL  ADHFGJKSHH<br />
+      E-MAIL:7777777@777.com<br />
+      TEL:777-777-777
+    </p>
+    <div class="icon_box">
+      <a href="#"><i class="layui-icon layui-icon-login-wechat weixin-icon"></i></a>
+      <a href="#"><i class="layui-icon layui-icon-login-weibo weibo-icon"></i></a>
+    </div>
+  </div>
+
+  <!-- end-footer -->
+  <script>
+  layui.use(['carousel','jquery','element'],function(){
+    var carousel = layui.carousel,$ = layui.$;
+    //建造实例
+    carousel.render({
+      elem: '#test1'
+      ,width: '100%' //设置容器宽度
+      ,arrow: 'always'
+      ,height:'auto'
+      //,anim: 'updown' //切换动画方式
+    });
+    $('.app-header-menuicon').on('click',function(){
+      $('.header-down-nav').toggleClass('down-nav')
+    })
+    var imgH = $('.imgbox div.layui-this').outerHeight();
+    $('.imgH').css('height',imgH+'px')
+    window.onresize = function () {
+      var imgH = $('.imgbox div.layui-this').outerHeight();
+      $('.imgH').css('height',imgH+'px')
+    };
+
+  });
+
+
+  $('#login').on('click', function(){
+        layer.open({
+          type: 2,
+          title: '',
+          maxmin: true,
+          shadeClose: true, //点击遮罩关闭层
+          area : ['480px' , '300px'],
+          content: '../html/login.html'
+        });
+    });
+
+  </script>
+</body>
+</html>

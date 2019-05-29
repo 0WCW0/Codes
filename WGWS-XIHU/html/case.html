@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>西湖故事</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <script type="text/javascript" src="../res/layui/layui.js"></script>
+  <link rel="stylesheet" type="text/css" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="../res/static/css/main.css">
+  <link rel="stylesheet" href="../res/layui/css/modules/layer/default/layer.css">
+  <script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+  <script src="../res/layui/layui.js"></script>
+  <script src="../res/layer/layer.js"></script>
+  <script src="../res/static/js/jquery.js"></script>
+  <!--加载meta IE兼容文件-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+<!-- 回到顶部 -->
+  <button id="test" style="position:fixed;right:25px;bottom:50px">
+    <img src="../res/static/images/top.jpg" alt="">
+  </button>
+  <script>
+    test.onclick = function(){
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+  </script>
+  
+  <!-- header -->
+  <div class="header_box">
+    <div class="header">  
+      <ul class="app-header">
+        <li class="app-header-menuicon">
+           <i class="layui-icon layui-icon-more-vertical"></i>
+        </li>
+      </ul>
+
+      <h1 class="logo">
+        <a href="map.html">
+        <img style="width: 50%" src="../res/static/images/logo.jpg">
+        </a>
+
+      </h1>
+      <div class="nav"  style="visibility: visible">
+        <a href="index.html">西湖首页</a>
+        
+        <select name="" id='sel' onchange="window.location=this.value;" class="xiala">
+        
+          <option>西湖故事</option>
+
+          <option value="story.html">典故传说</option>
+
+          <option value="poem.html">诗歌词赋</option>
+
+          <option value="prose.html">美文辞藻</option>
+        </select>
+
+
+        <a href="service.html">游玩攻略</a>
+        <a href="about.html"  class="active">西湖十景</a>
+        <a id="login">登录/注册</a>
+      </div> 
+      
+      <ul class="layui-nav header-down-nav">
+        <li class="layui-nav-item"><a href="index.html" class="active">西湖首页</a></li>
+        <li class="layui-nav-item"><a href="case.html">西湖故事</a></li>
+        
+        <li class="layui-nav-item"><a href="service.html">西湖十景</a></li>
+        <li class="layui-nav-item"><a href="about.html">游玩攻略</a></li>
+        <li class="layui-nav-item"><a id="login">登录/注册</a></li>
+      </ul> 
+    </div>
+  </div>
+  <!-- end-header -->
+
+
+
+  <!-- case-content -->
+  <div class="case-content">
+    <div class="banner">
+        <div class="img-text">
+          <img src="../res/static/images/bainiangzi_1.jpg" alt="">
+          <h3>
+            今日推荐
+            <br><span>典故事迹</span>
+          </h3>
+        </div>
+        <div class="img-text active">
+          <img src="../res/static/images/shi_1.jpg" alt="">
+          <h3>
+            今日推荐
+            <br><span>诗文词赋</span>
+          </h3>
+        </div>
+    </div>
+    <div class="imgtext-flow">
+      <div class="layui-fluid pb50">
+        <div class="layui-row item-list-box layui-clear" id="item-list-box" style="margin:0">
+        </div>
+      </div>
+    </div>  
+  </div>
+  <!-- end case-content -->
+  <!-- 模版引擎导入 -->
+ 
+  <script id="zonesTpl" type="text/html">
+  
+    <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+      <div class="item">
+          <img src="<% d.images %>" alt="">
+          <div class="item-text">
+            <h3><% d.text %></h3>
+            <span>西湖·故事</span>
+          </div>
+      </div>
+    </div>
+ 
+  </script>
+
+  
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="line"></div>
+    <p class="copyright">
+      @2019  ALL  ADHFGJKSHH<br />
+      E-MAIL:7777777@777.com<br />
+      TEL:777-777-777
+    </p>
+    <div class="icon_box">
+      <a href="#"><i class="layui-icon layui-icon-login-wechat weixin-icon"></i></a>
+      <a href="#"><i class="layui-icon layui-icon-login-weibo weibo-icon"></i></a>
+    </div>
+  </div>
+  <!-- end-footer -->
+
+<script type="text/javascript">
+layui.config({
+  base: '../res/static/js/' //你存放新模块的目录，注意，不是layui的模块目录
+}).use(['common','flow','laytpl','element'],function(){
+  var common = layui.common,flow = layui.flow,laytpl = layui.laytpl,element = layui.element,$ = layui.$;
+
+
+  // 模版引擎导入
+
+  var data = {"code":0,"msg":"比喻","last_page":2,"list_page":1000,"data":[
+  {"text":"白蛇传","images":"../res/static/images/bainiangzi_2.jpg"},
+  {"text":"东坡肉","images":"../res/static/images/dongporou_2.jpg"},
+  {"text":"湖上·徐元杰","images":"../res/static/images/hushang.jpg"},
+  {"text":"西湖梦·余秋雨","images":"../res/static/images/xihumeng.jpg"}
+  ]}
+
+  laytpl.config({
+    open: '<%',
+    close: '%>'
+  });
+
+    flow.load({
+      elem: '#item-list-box'
+      ,isAuto :  false
+      ,isLazyimg: true
+      ,mb:100
+      ,done: function(page,next){
+        var lis = [];
+         var getTpl = zonesTpl.innerHTML;
+          var img = new Image();
+          layui.each(data.data,function(index,item){  
+            laytpl(getTpl).render(item,function(html){
+                lis.push(html); 
+            });
+          });
+          // common.waterfall(); 
+          if(page < data.data.last_page){
+            next(lis.join(''),true);
+          }else{
+            next(lis.join(''),false);
+          }
+          element.init()
+      }
+    })
+  // window.onload = function(){
+  //   common.waterfall(); 
+  // }
+  $('.app-header-menuicon').on('click',function(){
+    $('.header-down-nav').toggleClass('down-nav')
+  })
+  $('.case-content .banner .img-text').on('click',function(){
+    if($(this).hasClass('active')){
+      $(this).removeClass('active').siblings('.img-text').addClass('active')
+    }else{
+      $(this).addClass('active').siblings('.img-text').removeClass('active')
+    }
+  })
+});
+
+$('#login').on('click', function(){
+        layer.open({
+          type: 2,
+          title: '',
+          maxmin: true,
+          shadeClose: true, //点击遮罩关闭层
+          area : ['480px' , '300px'],
+          content: '../html/login.html'
+        });
+    });
+
+
+</script>
+</body>
+</html>

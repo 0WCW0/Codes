@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>西湖十景</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <script type="text/javascript" src="../res/layui/layui.js"></script>
+  <link rel="stylesheet" type="text/css" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" type="text/css" href="../res/static/css/main.css">
+  <link rel="stylesheet" href="../res/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../res/layui/css/modules/layer/default/layer.css" media="all">
+  <script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+  <script src="../res/layui/layui.js"></script>
+  <script src="../res/layer/layer.js"></script>
+  <script src="../res/static/js/jquery.js"></script>
+  <!--加载meta IE兼容文件-->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+<!-- 回到顶部 -->
+  <button id="test" style="position:fixed;right:25px;bottom:50px">
+    <img src="../res/static/images/top.jpg" alt="">
+  </button>
+  <script>
+    test.onclick = function(){
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+  </script>
+  
+  <!-- header -->
+  <div class="header_box">
+    <div class="header">  
+      <ul class="app-header">
+        <li class="app-header-menuicon">
+           <i class="layui-icon layui-icon-more-vertical"></i>
+        </li>
+      </ul>
+     <h1 class="logo">
+        <a href="map.html">
+        <img style="width: 50%" src="../res/static/images/logo.jpg">
+        </a>
+
+      </h1>
+      <div class="nav"  style="visibility: visible">
+        <a href="index.html">西湖首页</a>
+        <a href="case.html">西湖故事</a>
+
+        <a href="service.html">游玩攻略</a>
+        <a href="about.html"  class="active">西湖十景</a>
+        <a id="login">登录/注册</a>
+      </div> 
+
+      <ul class="layui-nav header-down-nav">
+        <li class="layui-nav-item"><a href="index.html" class="active">西湖首页</a></li>
+        <li class="layui-nav-item"><a href="case.html">西湖故事</a></li>
+
+        <li class="layui-nav-item"><a href="service.html">西湖十景</a></li>
+        <li class="layui-nav-item"><a href="about.html">游玩攻略</a></li>
+        <li class="layui-nav-item"><a id="login">登录/注册</a></li>
+      </ul> 
+    </div>
+  </div>
+  <!-- end-header -->
+
+
+  <!-- about-content -->
+  <div class="about-content">
+
+    <div class="about-big-img">
+      <div class="text_box">
+        <div class="text">
+          <h3>西湖十景</h3>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          “西湖十景”是指浙江省杭州市著名旅游景点西湖及其周边的十处特色风景。最著名的以南宋苏堤春晓、断桥残雪、曲院风荷、花港观鱼、柳浪闻莺、雷峰夕照、三潭印月、平湖秋月、双峰插云、南屏晚钟闻名。“西湖十景”，景名合一，令人如临其境，如见其形，深受国内外广大游客欢迎，堪称景点命名的典范之作。“西湖十景”景名之美，甚至打动了国际古迹遗址理事会（ICOMOS）的评审专家，对西湖申遗成功有着不可磨灭的功绩。
+        </div>
+      </div>
+    </div>
+
+    <div class="about-info">
+      <div class="site-tree">
+        <ul class="layui-tree">
+          <li class="noicon"><a href="#c1"><cite>断桥残雪</cite> </a></li>
+          <li class="noicon"><a href="#c2"><cite>苏堤春晓</cite></a></li>
+          <li class="noicon"><a href="#c3"><cite>平湖秋月</cite></a></li>
+          <li class="noicon"><a href="#c4"><cite>花港观鱼</cite></a></li>
+          <li class="noicon"><a href="#c5"><cite>柳浪闻莺</cite></a></li>
+          <li class="noicon"><a href="#c6"><cite>三潭印月</cite></a></li>
+          <li class="noicon"><a href="#c7"><cite>双峰插云</cite></a></li>
+          <li class="noicon"><a href="#c8"><cite>雷峰夕照</cite></a></li>
+          <li class="noicon"><a href="#c9"><cite>南屏晚钟</cite></a></li>
+          <li class="noicon"><a href="#c10"><cite>曲院风荷</cite></a></li>
+        </ul>
+      </div>
+      
+      <div class="img-texts">
+        <div class="item">
+          <div class="layui-fluid">
+            <div class="layui-row">
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 img-center">
+                <img src="../res/static/images/duanqiao1.jpg" style="margin-top: 200px">
+              </div>
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                <div class="text">
+                  <h5><a id="c1">断桥残雪</a></h5>
+                  <h4>断桥残雪</h4>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位于在西湖北部白堤东端的断桥一带， 范围约2.61公顷。尤以冬天观赏西湖雪景为胜。当西湖雪后初晴时，日出映照，断桥向阳的半边桥面上积雪融化、露出褐色的桥面一痕，仿佛长长的白链到此中断了， 呈“雪残桥断”之景。</p>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位于白堤东端的断桥上视域开阔，是完整观赏西湖南、北水域景观的最佳地点。因中国家喻户晓的民间爱情故事《白蛇传》的主人公白娘子与许仙相识于此，断桥成为拥有爱情象征意义的、最富盛名的桥。因白堤一直保持了沿堤两侧间株桃柳的植被特色，春日里桃红柳绿，游人如织。南宋时又名宝佑桥，也称段家桥。桥为1921年重建。桥畔有“云水光中”水榭和断桥残雪碑亭。断桥残雪一般指冬日雪后，桥的阳面冰雪消融，但是，阴面仍有残雪似银，从高处眺望，桥似断非断。伫立桥头，放眼四望，远山近水，尽收眼底，是欣赏西湖雪景之佳地。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="img-texts">
+        <div class="item">
+          <div class="layui-fluid">
+            <div class="layui-row">
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                <div class="text">
+                  <h5> <a id="c2">苏堤春晓</a></h5>
+                  <h4>苏堤春晓</h4>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;苏堤自北宋始建至今，一直保持了沿堤两侧相间种植桃树和垂柳的植物景观特色。春季拂晓是欣赏“苏堤春晓”的最佳时间，此时薄雾蒙蒙，垂柳初绿、桃花盛开，尽显西湖旖旎的柔美气质。沿堤栽有杨柳、芙蓉、碧桃、海棠等40多个品种。苏堤风光旖旎，晴、雨、阴、雪各有情趣，四时美景也不同， 尤以春天清晨赏景最佳，绿杨拂岸，艳桃灼灼，晓日照堤，春色如画， 故有“苏堤春晓”之美名。
+
+                  </p>
+                </div>
+              </div>
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 img-center">
+                <img src="../res/static/images/sudi1.jpg" style="margin:150px 0 0 100px ">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="img-texts">
+        <div class="item">
+          <div class="layui-fluid">
+            <div class="layui-row">
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 img-center">
+                <img src="../res/static/images/qiuyue1.jpg" style="margin-top: 150px">
+              </div>
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                <div class="text">
+                  <h5> <a id="c3">平湖秋月</a></h5>
+                  <h4>平湖秋月</h4>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位于孤山东南角的滨湖地带、白堤西端南侧，是自湖北岸临湖观赏西湖水域全景的最佳地点之一。以秋天夜晚皓月当空之际观赏湖光月色为主题。“平湖秋月”景观完整保留了清代皇家(17-18世纪)钦定西湖十景时“一院一楼一碑一亭”的院落布局。每当清秋气爽。湖面平静如镜，皓洁的秋月当空，月光与湖水交相辉映，颇有“一色湖光万顷秋”之感，故在湖畔立碑，题名“平湖秋月”。“湖天一碧楼”联曰：万顷湖平长似镜;四时月好最宜秋。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+     <div class="img-texts">
+            <div class="item">
+              <div class="layui-fluid">
+                <div class="layui-row">
+                  <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                    <div class="text">
+                      <h5> <a id="c4">花港观鱼</a></h5>
+                      <h4>花港观鱼</h4>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在苏堤映波桥西北197米处，介于小南湖与西里湖间，范围约0.25公顷。以赏花、观鱼为景观主题，体验自然的勃勃生机。春日里，落英缤纷，呈现出“花著鱼身鱼嘬花”的胜景。“花港观鱼”位于南宋时(12－13世纪)官员卢允升的别墅内，因所在位置水域名花港，别墅内凿池养鱼，故名“花港观鱼”。该景观单元现存御碑、御碑亭、鱼池及假山等遗址。
+                      </p>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;花港观鱼位于西湖西南角，东接苏堤，南北分别毗邻小南湖和西里湖。据记载，花家山麓有一小溪，流经此处注入西湖。因沿溪多栽花木，常有落英飘落溪中，故名“花港”。南宋内侍卢允升曾在此建宅卜居，莳花养鱼，构筑园林，渐成规模。花港观鱼的史称，源出南宋宫廷画师马远所作西湖山水画的画题。清代，康熙南巡至杭州时，曾手书花港观鱼景名，并在赏鱼池畔立碑建亭。</p>
+                    </div>
+                  </div>
+                  <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 img-center">
+                    <img src="../res/static/images/huagang.jpg" style="margin:170px 0 0 100px ">
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+          <div class="img-texts">
+        <div class="item">
+          <div class="layui-fluid">
+            <div class="layui-row">
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 img-center">
+                <img src="../res/static/images/liulang.jpg" style="margin-top: 150px">
+              </div>
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                <div class="text">
+                  <h5><a id="c5">柳浪闻莺</a></h5>
+                  <h4>柳浪闻莺</h4>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在西湖东岸钱王祠门前水池北侧约50米的濒湖一带，范围约0.54公顷，以观赏滨湖的柳林景观为主题。“柳浪闻莺”所处的位置原为南宋时(12－13世纪)的御花园——“聚景园”，因园中多柳树，风摆成浪、莺啼婉转，故得题名“柳浪闻莺”。如今，“柳浪闻莺”依然保留了传统的柳林特色，漫步其间，且行且听，柳丝拂面，莺鸟鸣啼，一派生机盎然的景象。</p>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位于西湖东南岸，清波门处。南宋时为帝王御花园，称聚景园。元代回族巨商阿老丁，在杭州兴建清真寺，死后葬此，俗称回回坟。清代恢复柳浪闻莺旧景。柳型各具特色：柳丝飘动似贵妃醉酒，称“醉柳”;枝叶繁茂如狮头，称“狮柳”;远眺象少女浣纱，称“浣纱柳”等。有柳洲之名。其间黄莺飞舞，竞相啼鸣，故有“柳浪闻莺”之称。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+     <div class="img-texts">
+            <div class="item">
+              <div class="layui-fluid">
+                <div class="layui-row">
+                  <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                    <div class="text">
+                      <h5><a id="c6">三潭印月</a></h5>
+                      <h4>三潭印月</h4>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在西湖外湖西南部的小瀛洲岛及岛南局部水域，范围约7.67公顷，是杭州西湖最具标志性的景观。该景观以水中三塔、小瀛洲岛为核心观赏要素，以月夜里在岛上观赏月、塔、湖的相互映照、引发禅境思考和感悟为欣赏主题。小瀛洲岛在明万历间(16世纪)浚湖堆土而成，呈“湖中有岛，岛中有湖”的“田”字形格局，是江南水上园林的经典。全岛以亭台楼阁配以传统花木构成色彩绚丽的景致，与岛内外水光云天相映，象征了中国古代神话中的蓬莱仙岛。
+                      </p>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;三潭印月，西湖十景之一，位于西湖中部偏南，与湖心亭、阮公墩鼎足而立合称“湖中三岛”，犹如我国古代传说中的蓬莱三岛，故又称小瀛洲。小瀛洲北宋时已成为湖上赏月佳处。明万历年间，取疏浚西湖的葑泥在岛的四周绕滩筑堤，形成湖中之湖。清雍正年间，在堤岛之间，南北贯以曲桥，东西连以土堤，构成了“湖中有岛，岛中有湖”的园林特色。总面积约7公顷，水面占60%。俯瞰整个小瀛洲犹如一个硕大的“田”字。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 img-center">
+                    <img src="../res/static/images/santanyinyue.jpg" style="margin:200px 0 0 100px ">
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+          <div class="img-texts">
+        <div class="item">
+          <div class="layui-fluid">
+            <div class="layui-row">
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 img-center">
+                <img src="../res/static/images/shuangyun.jpg" style="margin-top: 170px">
+              </div>
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                <div class="text">
+                  <h5><a id="c7">双峰插云</a></h5>
+                  <h4>双峰插云</h4>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由西湖西部群山中的南、北两座高峰，以及西湖西北角洪春桥畔的观景点构成，以观赏西湖周边群山云雾缭绕的景观为主题。西湖南北高峰在唐宋时各有塔一座，在春、秋晴朗之日远望两峰，可见遥相对峙的双塔巍然耸立，气势非凡。每当云雾弥漫，塔尖于云中时隐时显，恍若云天佛国。
+                  </p>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“双峰插云”御碑亭景点，在洪春桥畔。双峰即南高峰、北高峰，分别位于西湖之西南、西北。南高峰海拔256.9米，北高峰海拔355米。两峰遥相对峙，绵延相距十余里。张岱《西湖十景 两(双)峰插云》： 一峰一高人，两人相与语。 此地有西湖，勾留不肯去。此景本是湖中遥望之景，清初为了立碑才移到陆上去的。当群山云雾迷漫时，两峰时露双尖，宛如峰插云霄，自然风光异常优美，峰势高峻磅礴，晴雨晨昏不同，尤在雨后或阴翳多云天气，彩云、白云或浓或淡，忽缠忽遮，是云是山，一片朦胧。如一幅壮观的水墨淋漓而浓淡有致的山水画卷展现在面前。 故名“两峰插云”。清康熙皇帝游此，改为“双峰插云”。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+     <div class="img-texts">
+            <div class="item">
+              <div class="layui-fluid">
+                <div class="layui-row">
+                  <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                    <div class="text">
+                      <h5><a id="c8">雷峰夕照</a></h5>
+                      <h4>雷峰夕照</h4>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位于西湖南岸的夕照山一带，范围约13.19公顷，以黄昏时的山峰古塔剪影景观为观赏特点。该景观的最重要建筑要素为雷峰塔，始建于吴越国时期(977年)，民国(1924年)塔毁后以遗址形式保存，曾与保俶塔形成西湖南北两岸的对景，佐证了佛教文化的兴盛对西湖景观的直接影响。雷峰塔还因中国四大民间爱情故事之一的《白蛇传》而成为爱情坚贞的象征，赋予了西湖景观丰富的历史内涵。2002年，为使遗址不再被风雨剥蚀，按原塔形式建造了覆罩于遗址之上的保护性塔，兼顾恢复了古塔本身及与保俶塔的对景景观。
+                      </p>
+                       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;雷峰塔与白娘子的故事，流传深广。故事中的雷峰塔就位于西湖南岸夕照山上。宋吴越王钱弘俶因黄妃得子而建。初名“黄妃塔”。原拟建高十三层宝塔，由财力不济，拟改七层，峻工时只造了五层。结构为砖石内心，外建木构楼廊，内壁嵌有刻着《华严经》的条石，塔下供奉金铜十六罗汉像。建筑雄伟壮观，为藏经之所。因塔址小山名雷峰，后人改称“雷峰塔”。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 img-center">
+                    <img src="../res/static/images/leifengta.jpg" style="margin:200px 0 0 100px ">
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+          <div class="img-texts">
+        <div class="item">
+          <div class="layui-fluid">
+            <div class="layui-row">
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 img-center">
+                <img src="../res/static/images/nanping.jpg" style="margin-top: 100px">
+              </div>
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                <div class="text">
+                  <h5><a id="c9">南屏晚钟</a></h5>
+                  <h4>南屏晚钟</h4>
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位于西湖南岸的南屏山一带，范围约3.91公顷，以南屏山麓净慈寺钟声响彻湖上的审美意境为特点。该景观属佛教文化古迹，以听觉欣赏为特征。南屏山麓自五代(10世纪)以来就有“东南佛国”的佛教胜地。始建于公元954年的净慈寺成为与灵隐寺并峙于西湖南北的两大佛教道场之一。每当佛寺晚钟敲响，钟声振荡频率传到山上的岩石、洞穴，随之形成悠扬共振齐鸣的钟声。今已成为杭城除夕夜迎新辞旧的撞钟活动场所。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+     <div class="img-texts">
+            <div class="item">
+              <div class="layui-fluid">
+                <div class="layui-row">
+                  <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                    <div class="text">
+                      <h5><a id="c10">曲院风荷</a></h5>
+                      <h4>曲院风荷</h4>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位于西湖北岸的苏堤北端西侧22米处，范围约0.06公顷，以夏日观荷为主题，在视觉上呈现出“接天莲叶无穷碧，映日荷花别样红”的特色。曲院，原为南宋(1127－1279)设在洪春桥的酿造官酒的作坊，取金沙涧之水以酿官酒。因该处多荷花，每当夏日荷花盛开、香风徐来，荷香与酒香四处飘溢，有“暖风熏得游人醉”的意境。
+                      </p>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曲院风荷位于西湖西北角，素以湖景、荷景著称，为西湖十景之一。据记载，宋代洪春桥畔有一处官家酿酒作坊，坊内与金沙涧相通的池塘种满了荷花，每逢夏日熏风吹拂，荷香与酒香四溢，令人陶醉，人们称之为“曲院荷风”。清代，酒坊关闭，康熙游湖时御书西湖十景碑，便将“麯”字改成“曲”，易“荷风”为“风荷”，“曲院风荷”的景名便由此沿用至今。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 img-center">
+                    <img src="../res/static/images/sudi1.jpg" style="margin:200px 0 0 100px ">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!-- about-content -->
+
+
+ <!-- footer -->
+  <div class="footer">
+    <div class="line"></div>
+    <p class="copyright">
+      @2019  ALL  ADHFGJKSHH<br />
+      E-MAIL:7777777@777.com<br />
+      TEL:777-777-777
+    </p>
+    <div class="icon_box">
+      <a href="#"><i class="layui-icon layui-icon-login-wechat weixin-icon"></i></a>
+      <a href="#"><i class="layui-icon layui-icon-login-weibo weibo-icon"></i></a>
+    </div>
+  </div>
+  <!-- end-footer -->
+
+  <script type="text/javascript">
+  layui.use('jquery',function(){
+    var $ = layui.$;
+    //建造实例
+    $('.app-header-menuicon').on('click',function(){
+      $('.header-down-nav').toggleClass('down-nav')
+    })
+  });
+
+ $('#login').on('click', function(){
+        layer.open({
+          type: 2,
+          title: '',
+          maxmin: true,
+          shadeClose: true, //点击遮罩关闭层
+          area : ['480px' , '300px'],
+          content: '../html/login.html'
+        });
+    });
+  
+  </script>
+</body>
+</html>
